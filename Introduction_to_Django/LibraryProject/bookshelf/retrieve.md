@@ -1,5 +1,7 @@
-# Retrieve Book Records
+# Retrieve Book Record by ID
 
-## Step 1: Open Django shell
-```bash
-python manage.py shell
+### Command:
+```python
+from bookshelf.models import Book
+book = Book.objects.get(id=1)
+print(book.title, "-", book.author, "-", book.publication_year)

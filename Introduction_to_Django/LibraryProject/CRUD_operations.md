@@ -9,9 +9,14 @@ book = Book.objects.create(title="1984", author="George Orwell", publication_yea
 
 ##  retrieve
 
-books = Book.objects.all()
-for book in books:
-    print(book.title, "-", book.author, "-", book.publication_year)
+# Retrieve Book Record
+
+### Command:
+```python
+from bookshelf.models import Book
+book = Book.objects.get(id=1)
+print(book.title, "-", book.author, "-", book.publication_year)
+
 
 OUTPUT
 1984 - George Orwell - 1949
